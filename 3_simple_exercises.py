@@ -2,23 +2,24 @@
 
 
 sampleDict = { 
-   "class":{ 
-      "student":{ 
-         "name":"Mike",
-         "marks":{ 
-            "physics":70,
-            "history":80
+   "class":{"student":{ "name":"Mike","marks":{"physics":70, "history":80
          }
       }
    }
 }
 
+history1 = sampleDict['class']['student']['marks']['history']
+print(history1)
 
 
 
 # 2) Add 2 inches to the son's height.
 
 dict={"son's name": "Lucas", "son's eyes": "green", "son's height": 32, "son's weight": 25}
+
+
+dict["son's height"] += 2
+print(dict["son's height"])
 
 
 
@@ -32,14 +33,14 @@ sampleDict = {
      'emp3': {'name': 'Brad', 'salary': 6500}
 }
 
-
-
-
-
+sampleDict['emp3']['salary']=8500
+print(sampleDict['emp3']['salary'])
 
 # 4 )Given the dictionary below, add a new key - 'work' with the values shown below:
 #       "work": ["Apology", "Phaedo", "Republic", "Symposium"]
 
 dict={"name": "Plato", "country": "Ancient Greece", "born": -427, "teacher": "Socrates", "student": "Aristotle"}
 
-
+dict['work']=["Apology", "Phaedo", "Republic", "Symposium"]
+#want a list so put brackets[]
+print(dict)
