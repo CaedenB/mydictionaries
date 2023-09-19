@@ -207,3 +207,20 @@ ProduceDictionary={
     }
 }
 
+
+for k in ProduceDictionary:
+    cost= ProduceDictionary[k]['cost']
+    amtsold= ProduceDictionary[k]['amt_sold']
+    total= ProduceDictionary[k]['total']
+    calamout= round(cost*amtsold,2)
+    if calamout != total:
+        print(f"produce name: {k}") 
+        print(f"Calculated total: {calamout}")
+        print(f"stated total: {total}\n")
+
+
+#string by itself is just a string, so k is just a string 
+    
+        
+        
+

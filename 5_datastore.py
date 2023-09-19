@@ -47,3 +47,35 @@ datastore = { "medical":[
 
       ]
 }
+
+'''
+import csv
+
+infile = open("retail_space.csv", "w")
+infilecsv= csv.writer(infile)
+infilecsv.writerow("room-number,use,sq-ft,price")
+
+
+for i in datastore["medical"]:
+    print(i.values())
+    infilecsv.writerow(str(i.values()))
+
+infile.close()
+
+'''
+
+
+outfile = open('retail_space.csv', 'w')
+outfile.write('rom-number, use, sq-ft, price\n')
+
+list_of_dic= datastore['medical']
+
+for dictionary in list_of_dic:
+    room = dictionary["room-number"]
+    use= dictionary['use']
+    sqft= dictionary['sq-ft']
+    price=dictionary['price']
+
+    outfile.write(f"{room},{use},{sqft},{price}\n")
+
+outfile.close()
