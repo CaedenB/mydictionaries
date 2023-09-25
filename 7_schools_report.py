@@ -31,13 +31,21 @@ for school in schools:
     if code in conference_schools:
         grad_rate =school["Graduation rate  women (DRVGR2020)"]
         if grad_rate >=75:
-            print(school["instnm"])
-            print(grad_rate)
+            print(f"University: {school['instnm']}")
+            print(f"Total graudation rate for women is {grad_rate}%")
+            print()
 
 
-    
-
-  
+for school in schools:
+    code = school['NCAA']['NAIA conference number football (IC2020)']
+    if code in conference_schools:
+        inst_off_camp_cost = school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]
+        if inst_off_camp_cost: 
+            if inst_off_camp_cost >= 50000:
+            #error nonetype means some null values
+                print(f"University: {school['instnm']}")
+                print(f"Total price for in-state students living off campus: ${inst_off_camp_cost}")
+                print()
 
 
 """""
