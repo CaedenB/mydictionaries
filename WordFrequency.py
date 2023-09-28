@@ -9,25 +9,22 @@ read_file= open('sometext.txt', 'r')
 
 textdict={}
 
-textcounter=1
-
 read=read_file.read()
 lower=read.lower()
-strip=lower.strip()
-words= lower.split()
-word_list=[]
-for word in words:
-  word_list.append(word.strip()) 
+lower = lower.replace(',','')
+lower=lower.replace('.','')
+lower=lower.replace("'",'')
+word_list = lower.split()
 
 #print(word_list) 
    
-
 for text in word_list:
-    if text == textdict:
-         textdict[text]=textcounter+1
+    if text in textdict:
+         textdict[text]+=1
     else:
-        textdict[text]=textcounter
+        textdict[text]=1
        
+
 
 print(textdict)
 
